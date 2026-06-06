@@ -3,57 +3,142 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minha Landing Page</title>
+    <title>Jefferson Diego</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style>
-        body {
-            font-family: 'Segoe UI', sans-serif;
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
+            min-height: 100vh;
             text-align: center;
-            padding: 100px 20px;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
-        h1 {
-            font-size: 4rem;
-            margin-bottom: 20px;
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
         }
-        p {
-            font-size: 1.5rem;
-            max-width: 600px;
-            margin: 0 auto 40px;
+
+        .hero {
+            margin-bottom: 60px;
         }
-        .btn {
-            display: inline-block;
-            background: white;
-            color: #667eea;
-            padding: 15px 40px;
-            font-size: 1.2rem;
+
+        .hero h1 {
+            font-size: 3.8rem;
+            margin-bottom: 16px;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 1.4rem;
+            opacity: 0.95;
+            line-height: 1.6;
+        }
+
+        .social-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 18px;
+            justify-content: center;
+            margin: 60px 0;
+        }
+
+        .social-btn {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: rgba(255, 255, 255, 0.15);
+            color: white;
+            padding: 16px 28px;
             border-radius: 50px;
             text-decoration: none;
-            font-weight: bold;
-            transition: all 0.3s;
+            font-size: 1.1rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 2px solid rgba(255,255,255,0.3);
+            min-width: 220px;
+            justify-content: center;
         }
-        .btn:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+
+        .social-btn:hover {
+            background: white;
+            color: #667eea;
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.25);
+            border-color: white;
         }
+
+        .social-btn i {
+            font-size: 1.4rem;
+        }
+
+        .instagram { background: linear-gradient(135deg, #e1306c, #f77737); }
+        .whatsapp { background: #25D366; }
+        .telegram { background: #229ED9; }
+        .linkedin { background: #0A66C2; }
+        .site { background: #4F46E5; }
+
         footer {
-            margin-top: 100px;
+            margin-top: auto;
+            padding-top: 60px;
+            opacity: 0.85;
             font-size: 1rem;
-            opacity: 0.8;
+        }
+
+        @media (max-width: 600px) {
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+            .social-btn {
+                min-width: 180px;
+                padding: 14px 20px;
+            }
         }
     </style>
 </head>
 <body>
-    <h1>Olá, Mundo!</h1>
-    <p>Esta é uma landing page simples criada aqui no ambiente.<br>
-    Foi hospedada automaticamente no Vercel!</p>
-    
-    <a href="#" class="btn">Botão de Ação</a>
-    
-    <footer>
-        Feito com ❤️ usando Grok + Vercel
-    </footer>
+    <div class="container">
+        <div class="hero">
+            <h1>Jefferson Diego</h1>
+            <p>Profissional apaixonado por tecnologia, inovação e resultados.<br>
+            Conecte-se comigo e vamos construir algo incrível juntos!</p>
+        </div>
+
+        <!-- Seção de Redes Sociais -->
+        <div class="social-buttons">
+            <a href="https://instagram.com/jeffersondiego87" target="_blank" class="social-btn instagram">
+                <i class="fab fa-instagram"></i> Instagram
+            </a>
+            <a href="https://wa.me/5584997018813" target="_blank" class="social-btn whatsapp">
+                <i class="fab fa-whatsapp"></i> WhatsApp
+            </a>
+            <a href="https://t.me/jeffersondiego" target="_blank" class="social-btn telegram">
+                <i class="fab fa-telegram"></i> Telegram
+            </a>
+            <a href="https://linkedin.com/in/jefferson-diego-976672189" target="_blank" class="social-btn linkedin">
+                <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
+            <a href="https://gtrigueiro.com.br/maquip/" target="_blank" class="social-btn site">
+                <i class="fas fa-globe"></i> Visitar Site
+            </a>
+        </div>
+
+        <footer>
+            Feito com ❤️ usando Grok + Vercel<br>
+            © 2026 Jefferson Diego
+        </footer>
+    </div>
 </body>
 </html>
